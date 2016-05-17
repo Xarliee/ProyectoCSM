@@ -24,11 +24,7 @@
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
-
-<p>
-  <strong>Craftsman:</strong>
-  <%= @product.craftsman %>
-</p>
+<%= image_tag @product.photo.url %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
