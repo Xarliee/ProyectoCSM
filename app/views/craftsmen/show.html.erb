@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @craftsman.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @craftsman.email %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @craftsman.region %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @craftsman.bio %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @craftsman.category %>
+</p>
+
+<p>
+  <strong>Comuna:</strong>
+  <%= @craftsman.comuna %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @craftsman.phone %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @craftsman.user %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @craftsman.age %>
+</p>
+
+<%= link_to 'Edit', edit_craftsman_path(@craftsman) %> |
+<%= link_to 'Back', craftsmen_path %>
