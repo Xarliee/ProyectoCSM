@@ -1,4 +1,5 @@
 class CraftsmenController < ApplicationController
+   load_and_authorize_resource
   before_action :set_craftsman, only: [:show, :edit, :update, :destroy]
 
   # GET /craftsmen
@@ -69,6 +70,6 @@ class CraftsmenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def craftsman_params
-      params.require(:craftsman).permit(:name, :email, :region, :bio, :category, :comuna,:photo_cache, :photo, :phone, :user_id, :age)
+      params.require(:craftsman).permit(:name, :email, :region, :bio, :category, :comuna, :photo_cache, :photo, :phone, :user_id, :age)
     end
 end

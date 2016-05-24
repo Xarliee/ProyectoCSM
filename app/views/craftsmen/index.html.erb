@@ -30,6 +30,8 @@
         <td><%= craftsman.phone %></td>
         <td><%= craftsman.user %></td>
         <td><%= craftsman.age %></td>
+        <td><%= image_tag( craftsman.photo, class:"img-responsive") %>
+
         <td><%= link_to 'Show', craftsman %></td>
         <td><%= link_to 'Edit', edit_craftsman_path(craftsman) %></td>
         <td><%= link_to 'Destroy', craftsman, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -39,5 +41,7 @@
 </table>
 
 <br>
+<% if can? :create, :craftsmen %>
 
 <%= link_to 'New Craftsman', new_craftsman_path %>
+<% end %>
