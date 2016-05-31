@@ -49,5 +49,16 @@
   <%= @craftsman.age %>
 </p>
 
+  <div>Artesanos</div>
+  <div>
+  <% @craftsman.products.each do |product| %>
+         <td><%= product.title %></td>
+         <td><%= image_tag( product.photo, class:"img-responsive") %>
+
+        <% end %> 
+</div>
 <%= link_to 'Edit', edit_craftsman_path(@craftsman) %> |
 <%= link_to 'Back', craftsmen_path %>
+
+
+

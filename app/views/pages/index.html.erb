@@ -4,14 +4,37 @@
 <ul>
     <li><%= link_to "Productos", products_path %></li>
     <li> <%= link_to "Artesanos", craftsmen_path %> </a></li>
-    <li><a title="Opcion 3" href="#">Opción 3</a></li>
-    <li><a title="Opcion 4" href="#">Opción 4</a></li>
-    <li><a title="Opcion 5" href="#">Opción 5</a></li>
+    
 </ul>
 </nav>
 
 
 
+  <tbody>
+    <% @craftsmen.each do |craftsman| %>
+      <tr>
+      <div>
+        <td><%= craftsman.name %></td>
+        <td><%= craftsman.email %></td>
+        <td><%= craftsman.region %></td>
+        <td><%= craftsman.category %></td>
+        <td><%= craftsman.comuna %></td>
+        <td><%= craftsman.age %></td>
+        <td><%= image_tag( craftsman.photo, class:"img-responsive") %>
+	  </div>        </tr>
+    <% end %>
+  </tbody>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <div>
+        <td><%= product.title %></td>
+        <td><%= product.price %></td>
+        <td><%= image_tag( product.photo, class:"img-responsive") %>
+        </div>
+        </tr>
+    <% end %>
+  </tbody>
 
 
  <%= link_to "Productos", products_path %> 

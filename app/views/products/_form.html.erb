@@ -37,14 +37,16 @@
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
+  
+  </div>
+   <div class="field">
+   <%= f.label :craftsman_id %><br>
+    <%#= f.collection_select :craftsman_id, Craftsman.all.collect,  :id, :name %>
+    <%= f.select :craftsman_id, Craftsman.all.map {|t| [t.name, t.id ]},{} %>
+
   </div>
     <div class="actions">
     <%= f.submit %>
-
-     </div>
-  
-
-
 
   </div>
 <% end %>

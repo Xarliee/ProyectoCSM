@@ -1,18 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Craftsmen</h1>
+<h1>Artesanos</h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Email</th>
       <th>Region</th>
-      <th>Bio</th>
       <th>Category</th>
       <th>Comuna</th>
-      <th>Phone</th>
-      <th>User</th>
       <th>Age</th>
       <th colspan="3"></th>
     </tr>
@@ -22,13 +18,9 @@
     <% @craftsmen.each do |craftsman| %>
       <tr>
         <td><%= craftsman.name %></td>
-        <td><%= craftsman.email %></td>
         <td><%= craftsman.region %></td>
-        <td><%= craftsman.bio %></td>
         <td><%= craftsman.category %></td>
         <td><%= craftsman.comuna %></td>
-        <td><%= craftsman.phone %></td>
-        <td><%= craftsman.user %></td>
         <td><%= craftsman.age %></td>
         <td><%= image_tag( craftsman.photo, class:"img-responsive") %>
 
@@ -43,5 +35,7 @@
 <br>
 <% if can? :create, :craftsmen %>
 
-<%= link_to 'New Craftsman', new_craftsman_path %>
+<%= link_to 'Ingresar Artesano', new_craftsman_path %>
 <% end %>
+<li><%= link_to "Productos", products_path %></li>
+

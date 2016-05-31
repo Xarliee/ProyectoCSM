@@ -3,7 +3,7 @@ ActiveAdmin.register User do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
- permit_params :name, :email, :comuna, :region, :mayor, :phone, :responsable, :info, :role
+ permit_params :name, :email, :password, :password_confirmation, :comuna, :region, :mayor, :phone, :responsable, :info, :role
 #
 # or
 #
@@ -20,12 +20,13 @@ ActiveAdmin.register User do
   index do 
     column :name
     column :email
-    column :encargado
-    column :mayor do |user|
-        
+    column :responsable 
+    column :mayor 
+    column :role  do |user|
+           
     end
-    actions
-  end 
+      actions
+  end
 
 filter :null
 
@@ -35,6 +36,8 @@ filter :null
     
     input :name
     input :email
+    #input :password
+    #input :password_confirmation
     input :comuna
     input :region
     input :mayor

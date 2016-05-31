@@ -4,7 +4,10 @@
   <strong>Title:</strong>
   <%= @product.title %>
 </p>
-
+<p>
+  <strong>Artesano:</strong>
+  <%= @product.craftsman.name %>
+</p>
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
@@ -25,6 +28,8 @@
   <%= @product.description %>
 </p>
 <%= image_tag @product.photo.url %>
-
+<div>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+  
+</div>
