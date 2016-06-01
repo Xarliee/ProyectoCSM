@@ -1,0 +1,2 @@
+module Muni::PagesHelper
+end
