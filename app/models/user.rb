@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   
   #User.invite!(:email => "new_user@platan.us")
+  
 
   enum role: [ :municipality, :customer, :guest]
 

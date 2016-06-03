@@ -6,7 +6,10 @@ Rails.application.routes.draw do
     get '/n' => "pages#index" 
   end
      namespace :muni do
-    get '/' => "pages#index" 
+    get '/' => "pages#index"
+    get '/show' => "pages#show"
+    get '/new' => "pages#new"
+    get '/edit' => "pages#edit" 
   end
 
   get 'pages/index'
@@ -20,7 +23,8 @@ Rails.application.routes.draw do
 
   resources :craftsmen
   resources :products
-  resources :craftsmen
+  resources :admin
+  resources :muni
   
 
   root 'pages#index'
