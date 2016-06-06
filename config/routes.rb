@@ -6,10 +6,8 @@ Rails.application.routes.draw do
     get '/n' => "pages#index" 
   end
      namespace :muni do
-    get '/' => "pages#index"
-    get '/show' => "pages#show"
-    get '/new' => "pages#new"
-    get '/edit' => "pages#edit" 
+    get '/' => "pages#index" 
+    get '/:id' => "pages#show" 
   end
 
   get 'pages/index'
