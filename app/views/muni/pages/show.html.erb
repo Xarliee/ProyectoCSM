@@ -18,3 +18,11 @@
   <%= @user.info %>
 </p>
 
+<div>Artesanos</div>
+  <div>
+  <% @user.craftsmen.each do |craftsman| %>
+         <td><%= craftsman.name %></td>
+         <td><%= image_tag( craftsman.photo, class:"img-responsive") %>
+
+        <% end %> 
+</div>

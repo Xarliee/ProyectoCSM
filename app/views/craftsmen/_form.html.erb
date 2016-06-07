@@ -49,7 +49,14 @@
   <div class="field">
     <%= f.label :age %><br>
     <%= f.number_field :age %>
+  
+  <div class="field">
+   <%= f.label :user_id %><br>
+    <%#= f.collection_select :craftsman_id, Craftsman.all.collect,  :id, :name %>
+    <%= f.select :user_id, User.all.map {|t| [t.name, t.id ]},{} %>
+
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
