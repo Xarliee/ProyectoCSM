@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_many :products
   has_many :craftsmen
   before_save :default_role
+  mount_uploader :photo, PhotoUploader
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

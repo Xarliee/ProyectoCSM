@@ -51,9 +51,12 @@
     <%= f.label :info %><br />
     <%= f.text_field :info, autofocus: true %>
 
-  <div class="actions">
-    <%= f.submit "Actualizar" %>
-  </div>
+    <%= f.file_field :photo %>
+    <%= f.hidden_field :photo_cache %> </p>
+
+   <div class="actions">
+    <%= f.submit "Sign up" %>
+    </div>
 <% end %>
 
 

@@ -44,6 +44,11 @@
 <div class="field">
     <%= f.label :info %><br />
     <%= f.text_field :info, autofocus: true %>
+ 
+<p>Foto Comuna</p>
+      <%= f.file_field :photo %>
+      <%= f.hidden_field :photo_cache %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
