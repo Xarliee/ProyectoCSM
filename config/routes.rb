@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   get 'cart/index'
+  get 'cart/clear' => "cart#clearCart"
+  get 'cart/:id'   => "cart#add"
 
   devise_for :customers #, :controllers => { :registrations => 'customers/registrations_controller'}
    

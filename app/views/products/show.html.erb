@@ -28,6 +28,8 @@
   <%= @product.description %>
 </p>
 <%= image_tag @product.photo.url %>
+<td><a href="/cart/<%= @product.id%>"> Agregar al carro </a></td>
+
 <div>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
