@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :customers
-  
+  devise_for :customers #, :controllers => { :registrations => 'customers/registrations_controller'}
+   
   devise_for :users
   
   namespace :muni do
