@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
 
-  ActiveAdmin.routes(self)
+  devise_for :customers
+  
   devise_for :users
-  namespace :admin do
+  
+  namespace :muni do
+    get '/' => "pages#index" 
+    get '/perfil' => "pages#show", as: 'profile'
+  end
+   namespace :admin do
     get '/n' => "pages#index" 
   end
-     namespace :muni do
-    get '/' => "pages#index" 
-    get '/:id' => "pages#show" 
-  end
+    
 
   get 'pages/index'
 
