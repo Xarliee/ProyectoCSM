@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'cart/index'
+
   devise_for :customers #, :controllers => { :registrations => 'customers/registrations_controller'}
    
   devise_for :users

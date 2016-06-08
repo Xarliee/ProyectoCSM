@@ -1,18 +1,28 @@
-
-<% unless user_signed_in? %>
-<li><%= link_to 'Ingresar', new_user_session_path %></li>
-<li><%= link_to 'Registrar', new_user_registration_path %></li>
-<li><%= link_to 'Registrar cliente', new_customer_registration_path %></li>
-
-<li><%= link_to 'Log out',  destroy_customer_session_path , method: :delete, data: { confirm: 'Seguro que quieres salir'} %></li>
-
-<% else %>
-<li><%= link_to current_user.email, muni_profile_path   %></li>
-<li><%= link_to current_user.name, edit_user_registration_path  %></li>
-<li><%= link_to 'Municipalidades', muni_index_path %></li>
-<li><%= link_to current_user.email, edit_customer_path   %></li>
-
-
-<li><%= link_to 'Log out',  destroy_user_session_path , method: :delete, data: { confirm: 'Seguro que quieres salir'} %></li>
-<% end %>
-
+<nav id="nav">
+   <div id="page_nav">	
+		<%= link_to 'home', root_path %></li>
+		<%= link_to '¿Quienes somos?', pages_us_path %>
+		<%= link_to '¿Contactanos?', pages_contact_path %>
+	</div>
+	
+	<div id="sign_in">
+	<% unless user_signed_in? %>
+		<%= link_to 'Ingresar Municipalidad', new_user_session_path %>
+		<%#= link_to 'Registrar Municipalidad', new_user_registration_path %>
+	<% else %>
+		<%= link_to current_user.email, muni_profile_path   %>
+		<%= link_to current_user.name, edit_user_registration_path  %>
+		<%= link_to 'Municipalidades', muni_index_path %>
+		<%= link_to 'Log out',  destroy_user_session_path , method: :delete, data: { confirm: 'Seguro que quieres salir'} %></li>
+		<% end  %>
+	<% unless customer_signed_in? %>
+		<%= link_to 'Ingresar cliente', new_customer_session_path %>
+		<%= link_to 'Registrar cliente', new_customer_registration_path %>
+	<% else %>
+    <%= link_to current_customer.name, cart_index_path  %>
+	<%= link_to 'Log out',  destroy_customer_session_path , method: :delete, data: { confirm: 'Seguro que quieres salir'} %></li>
+	
+	<% end %>
+	</div>
+	
+</nav>
