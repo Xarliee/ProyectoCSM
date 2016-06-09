@@ -1,4 +1,7 @@
 class CartController < ApplicationController
+  
+before_action :authenticate_customer!
+
   def add
     id = params[:id]
        if session[:cart] then
