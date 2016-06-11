@@ -15,6 +15,7 @@
 		<%= link_to 'Municipalidades', muni_index_path %>
 		<%= link_to 'Log out',  destroy_user_session_path , method: :delete, data: { confirm: 'Seguro que quieres salir'} %></li>
 		<% end  %>
+		
 	<% unless customer_signed_in? %>
 		<%= link_to 'Ingresar cliente', new_customer_session_path %>
 		<%= link_to 'Registrar cliente', new_customer_registration_path %>

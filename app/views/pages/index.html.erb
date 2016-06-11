@@ -12,6 +12,7 @@
 
 
   <tbody>
+  <div id="artesanos_home">
     <% @craftsmen.each do |craftsman| %>
       <tr>
       <div>
@@ -24,8 +25,10 @@
         <td><%= image_tag( craftsman.photo, class:"img-responsive") %>
 	  </div>        </tr>
     <% end %>
+  
   </tbody>
   <tbody>
+  <div id="productos_home">
     <% @products.each do |product| %>
       <tr>
         <div>
@@ -35,6 +38,7 @@
         </div>
         </tr>
     <% end %>
+      </div>
   </tbody>
 
 

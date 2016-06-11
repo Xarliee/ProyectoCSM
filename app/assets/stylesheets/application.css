@@ -54,3 +54,17 @@
 	float: left;
 	margin: 20px 5% 0 5%;
 }
+
+#artesanos_home {
+	line-height: 40px ;
+	padding: 0 10px 0 10px;
+	text-decoration: none; 
+	margin: 0 3% 0 0;
+		}
+
+#productos_home {
+	line-height: 40px ;
+	padding: 0 10px 0 10px;
+	text-decoration: none; 
+	margin: 0 3% 0 0;
+		}
