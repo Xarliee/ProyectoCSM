@@ -1,7 +1,8 @@
 class CartController < ApplicationController
   
 before_action :authenticate_customer!
-
+  
+ 
   def add
     id = params[:id]
        if session[:cart] then
@@ -25,9 +26,11 @@ end
 def index
   if session[:cart] then
     @cart = session[:cart]
+    
   else
     @cart = {}
   end 
-end 
+end
+
 
 end

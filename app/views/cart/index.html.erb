@@ -1,6 +1,11 @@
+  <h1><%=  current_customer.name %></h1>
+
+
+
 <h1>Tu Carro</h1>
 <%= link_to "Vacia carro", cart_clear_path %>
 <% total= 0 %>
+
 
 <ul>
 <% @cart.each do | id, quantity | %>

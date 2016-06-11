@@ -17,14 +17,14 @@
   <tbody>
     <% @craftsmen.each do |craftsman| %>
       <tr>
-        <td><%= craftsman.name %></td>
+        <td><%= link_to craftsman.name, craftsman %></td>
         <td><%= craftsman.region %></td>
         <td><%= craftsman.category %></td>
         <td><%= craftsman.comuna %></td>
         <td><%= craftsman.age %></td>
         <td><%= image_tag( craftsman.photo, class:"img-responsive") %>
 
-        <td><%= link_to 'Show', craftsman %></td>
+        
         <td><%= link_to 'Edit', edit_craftsman_path(craftsman) %></td>
         <td><%= link_to 'Destroy', craftsman, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
