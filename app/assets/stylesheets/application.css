@@ -35,7 +35,7 @@
 }
 #page_nav a{
 	line-height: 40px;
-	color: #fff;
+	color: green;
 	padding: 0 20px 0 20px;
 	text-decoration: none;
 	margin: 0 0 0 5%;
@@ -61,6 +61,8 @@
 	padding: 0 10px 0 10px;
 	text-decoration: none; 
 	margin: 0 3% 0 0;
+	float:left;
+	clear:none
 		}
 
 #productos_home {
