@@ -13,37 +13,45 @@
 
   <tbody>
 
-  <h2>Artesandos destacados</h2>
+<div id="destacados"><h2>Artesandos destacados</h2></div>
+   
   <div id="artesanos_home">
     <% @craftsmen.each do |craftsman| %>
       <tr>
-      <div>
-        <td><%= craftsman.name %></td>
-        <td><%= craftsman.email %></td>
-        <td><%= craftsman.region %></td>
-        <td><%= craftsman.category %></td>
-        <td><%= craftsman.comuna %></td>
-        <td><%= craftsman.age %></td>
-        <td><%= image_tag( craftsman.photo, class:"img-responsive") %>
-	  </div>        </tr>
+          <div id="artesano">       
+           <div class="panel panel-default">
+              <div class="panel-body">
+                <td><%= link_to craftsman.name, craftsman %></td>
+                <td><%= craftsman.comuna %></td>
+                <td><%= craftsman.age %></td>
+                <td><%= image_tag( craftsman.photo, class:"img-responsive") %>      </td> 
+              </div>
+           </div>
+          </div>
+      </tr>
     <% end %>
-  
+   </div>        
   </tbody>
-  <tbody>
-  <h2> Productos Destacados</h2>
+ 
+
+<tbody>
+   <div id="destacados"> <h2>Productos destacados</h2><div>
+
   <div id="productos_home">
     <% @products.each do |product| %>
       <tr>
-        <div>
-        <td><%= product.title %></td>
-        <td><%= product.price %></td>
-        <td><%= image_tag( product.photo, class:"img-responsive") %>
+        <div id="producto">          
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <td><%= product.title %></td>
+             <td><%= product.price %></td>
+             <td><%= image_tag( product.photo, class:"img-responsive") %></td>
+           </div>
+         </div>
         </div>
-        </tr>
+      </tr>
     <% end %>
-      </div>
+  </div>
   </tbody>
 
-
- <%= link_to "Productos", products_path %> 
- <%= link_to "Artesanos", craftsmen_path %> 
+ 

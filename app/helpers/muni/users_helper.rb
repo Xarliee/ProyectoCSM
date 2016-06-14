@@ -1,0 +1,2 @@
+module Muni::UsersHelper
+end

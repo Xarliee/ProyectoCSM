@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Muni Craftsmen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @muni_craftsmen.each do |muni_craftsman| %>
+      <tr>
+        <td><%= link_to 'Show', muni_craftsman %></td>
+        <td><%= link_to 'Edit', edit_muni_craftsman_path(muni_craftsman) %></td>
+        <td><%= link_to 'Destroy', muni_craftsman, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Craftsman', new_muni_craftsman_path %>

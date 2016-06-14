@@ -1,0 +1,2 @@
+module Muni::CraftsmenHelper
+end

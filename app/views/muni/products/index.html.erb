@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= link_to product.title, muni_product %></td>
+        <td><%= product.price %></td>
+        <td><%= image_tag( product.photo, class:"img-responsive") %>
+        <td><%= link_to 'Edit', edit_muni_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<br>
+<% if can? :create, :products %>
+<%= link_to 'Ingresar Producto', new_muni_product_path %>
+
+<li> <%= link_to "Artesanos", craftsmen_path %> </a></li>
+
+
+<% end %>
