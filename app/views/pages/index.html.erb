@@ -13,7 +13,7 @@
 
   <tbody>
 
-<div id="destacados"><h2>Artesandos destacados</h2></div>
+<div id="destacados"><h2>Artesanos destacados</h2></div>
    
   <div id="artesanos_home">
     <% @craftsmen.each do |craftsman| %>
@@ -43,7 +43,7 @@
         <div id="producto">          
          <div class="panel panel-default">
            <div class="panel-body">
-             <td><%= product.title %></td>
+              <td><%= link_to product.title, product %></td>
              <td><%= product.price %></td>
              <td><%= image_tag( product.photo, class:"img-responsive") %></td>
            </div>

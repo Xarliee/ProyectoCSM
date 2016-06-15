@@ -20,12 +20,19 @@
 <td><%= image_tag( @user.photo, class:"img-responsive") %>
 
 
-<div>Artesanos</div>
-  <div>
+<h2>Artesanos</h2>
+<div id="artesanos_home">
+     <tr>
+          <div id="artesano">       
+           <div class="panel panel-default">
+              <div class="panel-body">
   <% @user.craftsmen.each do |craftsman| %>
          <td><%= craftsman.name %></td>
          <td><%= image_tag( craftsman.photo, class:"img-responsive") %>
-
+              </div>
+           </div>
+          </div>
+      </tr>
         <% end %> 
 </div>
 
