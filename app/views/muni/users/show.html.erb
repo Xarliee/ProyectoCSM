@@ -21,12 +21,13 @@
 
 
 <h2>Artesanos</h2>
-<div id="artesanos_home">
-     <tr>
-          <div id="artesano">       
-           <div class="panel panel-default">
-              <div class="panel-body">
-  <% @user.craftsmen.each do |craftsman| %>
+   <div id="artesanos_home">
+    <% @user.craftsmen.each do |craftsman| %>
+      <tr>
+        <div id="artesano">       
+          <div class="panel panel-default">
+             <div class="panel-body">
+          
          <td><%= craftsman.name %></td>
          <td><%= image_tag( craftsman.photo, class:"img-responsive") %>
               </div>

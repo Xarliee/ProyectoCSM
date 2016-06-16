@@ -24,7 +24,7 @@
                 <td><%= link_to craftsman.name, craftsman %></td>
                 <td><%= craftsman.comuna %></td>
                 <td><%= craftsman.age %></td>
-                <td><%= image_tag( craftsman.photo, class:"img-responsive") %>      </td> 
+                <div id="imagen"><td ><%= image_tag( craftsman.photo, class:"img-responsive") %>      </td> </div>
               </div>
            </div>
           </div>
@@ -44,7 +44,7 @@
          <div class="panel panel-default">
            <div class="panel-body">
               <td><%= link_to product.title, product %></td>
-             <td><%= product.price %></td>
+             <td>$<%= product.price %></td>
              <td><%= image_tag( product.photo, class:"img-responsive") %></td>
            </div>
          </div>

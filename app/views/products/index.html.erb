@@ -16,8 +16,8 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= link_to product.title, product %></td>
-        <td><%= product.price %></td>
-        <td><%= image_tag( product.photo, class:"img-responsive") %>
+        <td>$<%= product.price %></td>
+        <td id="imagen"><%= image_tag( product.photo, class:"img-responsive") %>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }%></td>
       </tr>
@@ -34,4 +34,3 @@
 
 
 <% end %>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eius sit modi tenetur praesentium, nam velit hic, voluptatem enim distinctio suscipit maxime eaque fugiat aut explicabo eligendi provident. Sed, id!

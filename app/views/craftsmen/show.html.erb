@@ -2,7 +2,7 @@
 
 
 
-<%= image_tag @craftsman.photo.url %>
+<div id="img"><%= image_tag @craftsman.photo.url %></div>
 
 <p>
  <strong>Name:</strong>
@@ -59,8 +59,6 @@
       </tr>
         <% end %> 
 </div>
-<%= link_to 'Edit', edit_craftsman_path(@craftsman) %> |
-<%= link_to 'Back', craftsmen_path %>
 
 
 

@@ -119,4 +119,13 @@ line-height: 40px ;
 	float: left;
  	width: 33%;
  }
-}
+
+img {
+	border-radius: 108px 108px 108px 108px;
+-moz-border-radius: 108px 108px 108px 108px;
+-webkit-border-radius: 108px 108px 108px 108px;
+border: 16px double #000000; }
+
+tr {
+	border: 1px dashed blue;
+	}
