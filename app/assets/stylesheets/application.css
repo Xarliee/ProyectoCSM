@@ -33,16 +33,17 @@ background-image: url("assets/images/artesania.jpg");
 body {
 	background-color: #FF9900;
 }
-#frase {
+h1 {
 font-family: "Trebuchet MS", Verdana, sans-serif;
-background-image: url("Home/Desktop/desafiolatam/rails/ProyectoCSM/app/assets/images/artesania.jpg");
 width: 100%;
-height: 200px;
+height: 150px;
 text-align: center;
- background-image: url("/rails/ProyectoCSM/assets/images/artesania.jpg");
-
-
-}
+color: white;
+border-radius: 30px 30px 30px 30px;
+-moz-border-radius: 30px 30px 30px 30px;
+-webkit-border-radius: 30px 30px 30px 30px;
+border: 11px solid #000000;
+background-color: gray;}
 
 #nav{
 	width: 100%;
@@ -53,7 +54,8 @@ text-align: center;
 	 font-size: 13px;
 
 }
-h2 { text-align: center;}
+h2 { text-align: center;
+}
 
 #page_nav a{
 	line-height: 60px;
